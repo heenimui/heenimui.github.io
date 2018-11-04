@@ -31,14 +31,13 @@
   <div id="app">
     <h1>K-Pop Idol Groups and Their Highest SBRI</h1>
     <div class="container"></div>
-    <ul style="background-image: url(../../../../Downloads/audience-band-celebration-1190298.jpg);	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
+    <ul style="	background-image: linear-gradient(to bottom, rgba(244,0,0,0.2), rgba(115,145,193,0.8));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
       <li v-for="item in items">
         <h3>{{ item['fields']['Group Name'] }}</h3>
         <p><strong>Debut Year: </strong><br>{{ item['fields']['Debut Year'] }}</p>
         <p><strong>Entertainment Agency: </strong><br>{{ item['fields']['Entertainment Agency'] }}</p>
         <p><strong>Highest SBRI: </strong><br>{{ item['fields']['Highest SBRI'] }}</p>
         <p><strong>Rank: </strong><br>{{ item['fields']['Rank'] }}</p>
-
         <img :src="item['fields']['Image'][0]['thumbnails']['small']['url']" alt="" v-if="item['fields']['Image']" width="164">
       </li>
     </ul>
@@ -52,7 +51,6 @@
       </div>
     </div>
   </div>
-
   <div class="py-5">
     <div class="container">
       <div class="row">
@@ -60,7 +58,6 @@
           <button type="button" class="btn btn-warning" id="A">A</button>
           <button type="button" class="btn btn-danger" id="B">B</button>
           <button type="button" class="btn btn-success" id="C">C</button>
-
         </div>
       </div>
     </div>
