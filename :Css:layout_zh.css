@@ -1,0 +1,8 @@
+
+@media all and (min-width:768px) {
+    .development .txtList ul li a {padding:0 23px 0 5px;}
+}
+
+@media all and (max-width:1024px) and (min-width:768px) {
+    .development .txtList ul li {min-height:140px}
+}
