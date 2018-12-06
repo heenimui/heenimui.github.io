@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <title>IDOLBOOK - The library at your hand</title>
@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+
+  <link href="https://cdn.bootcss.com/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
   <link rel="stylesheet" href="css/animate.css">
@@ -28,6 +30,14 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+  <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js">
+  </script>
+
 
 </head>
 
@@ -41,26 +51,34 @@
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active"><a href="index.html" class="nav-link">首页</a></li>
-          <li class="nav-item"><a href="idol.html" class="nav-link">偶像整体</a></li>
-          <li class="nav-item"><a href="collections.html" class="nav-link">collections</a></li>
+          <li class="nav-item"><a href="idol.html" class="nav-link">偶像大观</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="room.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">collections</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown04">
+              <a class="dropdown-item" href="collection1.html">大热</a>
+              <a class="dropdown-item" href="collection2.html">经典</a>
+              <a class="dropdown-item" href="collection3.html">上升</a>
+              <a class="dropdown-item" href="collection4.html">嘻哈</a>
+            </div>
+          </li>
           <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="room.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
             <div class="dropdown-menu" aria-labelledby="dropdown04">
               <a class="dropdown-item" href="shop.html">商店</a>
-              <a class="dropdown-item" href="product-single.html">Single Product</a>
               <a class="dropdown-item" href="cart.html">购物车</a>
               <a class="dropdown-item" href="checkout.html">结算</a>
             </div>
           </li>
           <li class="nav-item"><a href="contact.html" class="nav-link">联系我</a></li>
-          <li class="nav-item cart"><a href="cart.html" class="nav-link"><span class="icon icon-shopping_cart"></span><span class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a></li>
+          <li class="nav-item cart"><a href="#userform" class="nav-link"><span class="icon icon-user-plus"></span></a></li>
         </ul>
       </div>
     </div>
   </nav>
   <!-- END nav -->
-<!-- intro slider -->
+
+  <!-- intro slider -->
   <section class="home-slider owl-carousel">
     <div class="slider-item" style="background-image: url(images/bg2.jpg);">
       <div class="overlay"></div>
@@ -68,8 +86,8 @@
         <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
           <div class="col-md-8 col-sm-12 text-center ftco-animate">
             <span class="subheading">Welcome</span>
-            <h1 class="mb-4">整合明星资讯及相关购买信息，邀你一同参与建设社区，体验一站式追星</h1>
-            <p class="mb-4 mb-md-5">The Best Experience to Fans。</p>
+            <h1 class="mb-4">韩国爱豆粉丝的专属天地</h1>
+            <p class="mb-4 mb-md-5">了解爱豆、产出与互动、购买一站式</p>
             <p><a href="#userform" class="btn btn-primary p-3 px-xl-4 py-xl-3">成为用户</a> <a href="#intro" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">随便看看</a></p>
           </div>
 
@@ -84,9 +102,9 @@
 
           <div class="col-md-8 col-sm-12 text-center ftco-animate">
             <span class="subheading">Welcome</span>
-            <h1 class="mb-4">Amazing &amp; Beautiful Community</h1>
+            <h1 class="mb-4">用你的方式安利爱豆</h1>
             <p class="mb-4 mb-md-5">让一切拥有温度，从你写的blog，从你拍的vlog，从你们的互动。</p>
-            <p><a href="shop.html" class="btn btn-primary p-3 px-xl-4 py-xl-3">买买买</a> <a href="idol.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">看看看</a></p>
+            <p><a href="#userform" class="btn btn-primary p-3 px-xl-4 py-xl-3">成为用户</a> <a href="#intro" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">随便看看</a></p>
           </div>
 
         </div>
@@ -100,16 +118,16 @@
 
           <div class="col-md-8 col-sm-12 text-center ftco-animate">
             <span class="subheading">Welcome</span>
-            <h1 class="mb-4">Eager For Growth</h1>
+            <h1 class="mb-4">渴望成长</h1>
             <p class="mb-4 mb-md-5">如果你也有兴趣，欢迎联系我们共同壮大IDOLOOK。</p>
-            <p><a href="shop.html" class="btn btn-primary p-3 px-xl-4 py-xl-3">买买买</a> <a href="idol.html" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">看看看</a></p>
+            <p><a href="#userform" class="btn btn-primary p-3 px-xl-4 py-xl-3">成为用户</a> <a href="#intro" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">随便看看</a></p>
           </div>
 
         </div>
       </div>
     </div>
   </section>
-<!-- END of intro slider -->
+  <!-- END of intro slider -->
 
   <!-- website introduction -->
   <section id="intro" class="ftco-about d-md-flex">
@@ -155,18 +173,18 @@
             </div>
           </div>
         </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="media d-block text-center block-6 services">
-              <div class="icon d-flex justify-content-center align-items-center mb-5">
-                <span class="flaticon-choices"></span></div>
-              <div class="media-body">
-                <h3 class="heading">最省心的花钱</h3>
-                <p>演唱会、粉丝见面会等活动信息，专辑，明星周边等，不需要切换平台，一次完成。</p>
-              </div>
+        <div class="col-md-4 ftco-animate">
+          <div class="media d-block text-center block-6 services">
+            <div class="icon d-flex justify-content-center align-items-center mb-5">
+              <span class="flaticon-choices"></span></div>
+            <div class="media-body">
+              <h3 class="heading">最省心的花钱</h3>
+              <p>演唱会、粉丝见面会等活动信息，专辑，明星周边等，不需要切换平台，一次完成。</p>
             </div>
           </div>
         </div>
       </div>
+    </div>
   </section>
   <!-- END of website feature -->
 
@@ -185,22 +203,22 @@
           <div class="row">
             <div class="col-md-6">
               <div class="menu-entry">
-                <a href="#" class="img" style="background-image: url(images/idol1.jpg);"></a>
+                <a href="collection1.html" class="img" style="background-image: url(images/idol1.jpg);"></a>
               </div>
             </div>
             <div class="col-md-6">
               <div class="menu-entry mt-lg-4">
-                <a href="collections.html" class="img" style="background-image: url(images/idol2.jpg);"></a>
+                <a href="collection2.html" class="img" style="background-image: url(images/idol2.jpg);"></a>
               </div>
             </div>
             <div class="col-md-6">
               <div class="menu-entry">
-                <a href="#" class="img" style="background-image: url(images/idol3.jpg);"></a>
+                <a href="collection3.html" class="img" style="background-image: url(images/idol3.jpg);"></a>
               </div>
             </div>
             <div class="col-md-6">
               <div class="menu-entry mt-lg-4">
-                <a href="#" class="img" style="background-image: url(images/idol4.jpg);"></a>
+                <a href="collection4.html" class="img" style="background-image: url(images/idol4.jpg);"></a>
               </div>
             </div>
           </div>
@@ -214,163 +232,15 @@
     <div class="container">
       <div class="heading-section text-md-right ftco-animate">
         <h2 class="mb-4">成为用户</h2>
-        <p class="mb-4">快来加入我们一起玩耍！</p>
+        <p class="mb-4">和小伙伴们一起为爱豆创作？买买买？体验便捷的购买体验？快来加入我们一起玩耍！</p>
       </div>
-      <iframe class="airtable-embed" src="https://airtable.com/embed/shr7VipBaabKHTJRg?backgroundColor=red" frameborder="0" onmousewheel="" width="100%" height="800" style="display: inline-block;padding-left: 15%; background: transparent; border: 1px #ccc;">
+      <iframe class="airtable-embed" src="https://airtable.com/embed/shr7VipBaabKHTJRg?backgroundColor=red" frameborder="0" onmousewheel="" width="100%" height="800" style="display: inline-block; background: transparent; border: 1px #ccc;">
       </iframe>
     </div>
   </section>
   <!-- END of 用户注册部分 -->
 
-
-  <!-- <section class="ftco-menu">
-    <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-7 heading-section text-center ftco-animate">
-          <span class="subheading">Discover</span>
-          <h2 class="mb-4">shops</h2>
-          <p>演唱会、粉丝见面会等活动信息，专辑，明星周边等。<br>Concerts, fan meetings and other events, albums and star goods.
-          </p>
-        </div>
-      </div>
-      <div class="row d-md-flex">
-        <div class="col-lg-12 ftco-animate p-md-5">
-          <div class="row">
-            <div class="col-md-12 nav-link-wrap mb-5">
-              <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">活动<br>Events</a>
-
-                <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">专辑<br>Albums</a>
-
-                <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">周边<br>Goods</a>
-              </div>
-            </div>
-            <div class="col-md-12 d-flex align-items-center">
-
-              <div class="tab-content ftco-animate" id="v-pills-tabContent">
-
-                <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
-                  <div class="row">
-                    <div class="col-md-4 text-center">
-                      <div class="menu-wrap">
-                        <a href="#" class="menu-img img mb-4" style="background-image: url(images/mama2018.jpg);"></a>
-                        <div class="text">
-                          <h3><a href="#">MAMA in HK 2018</a></h3>
-                          <p>Mnet亚洲音乐颁奖典礼 12月14日（五）下午7时（4小时）</p>
-                          <p class="price"><span>$2488/$2288/$2088/$1888/$888</span></p>
-                          <p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 text-center">
-                      <div class="menu-wrap">
-                        <a href="#" class="menu-img img mb-4" style="background-image: url(images/iu2018.jpg);"></a>
-                        <div class="text">
-                          <h3><a href="#">2018 IU 10th Anniversary Tour Concert in HK</a></h3>
-                          <p>IU李知恩十周年巡回演唱会2018香港站。</p>
-                          <p class="price"><span>$1580/$1080/$680</span></p>
-                          <p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 text-center">
-                      <div class="menu-wrap">
-                        <a href="#" class="menu-img img mb-4" style="background-image: url(images/got72018.jpg);"></a>
-                        <div class="text">
-                          <h3><a href="#">GOT7 2018 WOR'EYES ON YOU' IN HK</a></h3>
-                          <p>GOT7世界巡回演唱会2018.</p>
-                          <p class="price"><span>$2380/$1680/$1380/$980/$580</span></p>
-                          <p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
-                  <div class="row">
-                    <div class="col-md-4 text-center">
-                      <div class="menu-wrap">
-                        <a href="#" class="menu-img img mb-4" style="background-image: url(images/wannaone.jpeg);"></a>
-                        <div class="text">
-                          <h3><a href="#">Wanna One 1¹¹=1(Power of Destiny)</a></h3>
-                          <p>Wanna One的首张录音室专辑，亦是组合解散前最后一张正规专辑。</p>
-                          <p class="price"><span>$200.90</span></p>
-                          <p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 text-center">
-                      <div class="menu-wrap">
-                        <a href="#" class="menu-img img mb-4" style="background-image: url(images/minoxx.jpg);"></a>
-                        <div class="text">
-                          <h3><a href="#">MINO XX</a></h3>
-                          <p>WINNER成员宋闵浩（MINO)首张个人正规专辑《XX》。</p>
-                          <p class="price"><span>$200.90</span></p>
-                          <p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 text-center">
-                      <div class="menu-wrap">
-                        <a href="#" class="menu-img img mb-4" style="background-image: url(images/rvrbb.jpg);"></a>
-                        <div class="text">
-                          <h3><a href="#">Red Velvet Really Bad Boy</a></h3>
-                          <p>Red Velvet於今年（2018年）第三次回归歌坛带来迷你5辑《Really Bad Boy》.</p>
-                          <p class="price"><span>$200.90</span></p>
-                          <p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
-                  <div class="row">
-                    <div class="col-md-4 text-center">
-                      <div class="menu-wrap">
-                        <a href="#" class="menu-img img mb-4" style="background-image: url(images/winner.jpg);"></a>
-                        <div class="text">
-                          <h3><a href="#">WINNER应援手灯</a></h3>
-                          <p>黑白两款。</p>
-                          <p class="price"><span>$20.90</span></p>
-                          <p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 text-center">
-                      <div class="menu-wrap">
-                        <a href="#" class="menu-img img mb-4" style="background-image: url(images/got7.jpg);"></a>
-                        <div class="text">
-                          <h3><a href="#">GOT7抱枕</a></h3>
-                          <p>GOT7抱枕。</p>
-                          <p class="price"><span>$12.90</span></p>
-                          <p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 text-center">
-                      <div class="menu-wrap">
-                        <a href="#" class="menu-img img mb-4" style="background-image: url(images/sjde.jpg);"></a>
-                        <div class="text">
-                          <h3><a href="#">Super Junior-D&E NYLON杂志</a></h3>
-                          <p>Lorem ipsum dolor sit amet.</p>
-                          <p class="price"><span>$2.90</span></p>
-                          <p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- <section class="ftco-section">
+  <!-- blogs <section class="ftco-section">
     <div class="container">
       <div class="row justify-content-center mb-5 pb-3">
         <div class="col-md-7 heading-section ftco-animate text-center">
@@ -427,42 +297,17 @@
       </div>
     </div>
   </section> -->
-
-
   <section class="ftco-appointment">
     <div class="overlay"></div>
     <div class="container-wrap">
       <div class="row no-gutters d-md-flex align-items-center">
         <div class="col-md-6 d-flex align-self-stretch">
-          <div id="map"></div>
+          <div id="map" style="width: 700px; height: 440px; border: 1px solid #AAA;"></div>
         </div>
         <div class="col-md-6 appointment ftco-animate">
           <h3 class="mb-3">有任何问题，欢迎随时联系我</h3>
-          <iframe class="airtable-embed" src="https://airtable.com/embed/shrgjM0QQaENL17da?backgroundColor=red" frameborder="0" onmousewheel="" width="100%" height="250" style="background: transparent; border: 1px solid #ccc;"></iframe>
-          <!-- <form action="#" class="appointment-form">
-            <div class="d-md-flex">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="你的名字">
-              </div>
-              <div class="form-group ml-md-4">
-                <input type="text" class="form-control" placeholder="主题">
-              </div>
-            </div>
-            <div class="d-md-flex">
-
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="输入内容">
-              </div>
-            </div>
-            <div class="d-md-flex">
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="你的邮箱"></textarea>
-              </div>
-              <div class="form-group ml-md-4">
-                <input type="submit" value="发送消息给我" class="btn btn-primary py-3 px-4">
-              </div>
-            </div>
-          </form> -->
+          <iframe class="airtable-embed" src="https://airtable.com/embed/shrgjM0QQaENL17da?backgroundColor=red" frameborder="0" onmousewheel="" width="100%" height="250" style="background: transparent; border: 1px solid #ccc;">
+          </iframe>
         </div>
       </div>
     </div>
@@ -476,11 +321,6 @@
           <div class="ftco-footer-widget mb-4">
             <h2 class="ftco-heading-2">关于我们</h2>
             <p>在这里，找到你的偶像，与你的同好一同为你的爱豆创建展览，将他/她们的闪光或故事用有温度的文字和叙事展示给世界。在这里，你还可以在讨论区与其他粉丝积极互动，还可以在商店直接查看爱豆相关的演唱会、粉丝见面会、专辑发布、周边等购买信息。</p>
-            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-            </ul>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
@@ -526,11 +366,16 @@
             <h2 class="ftco-heading-2">有问题？</h2>
             <div class="block-23 mb-3">
               <ul>
-                <li><span class="icon icon-map-marker"></span><span class="text">中国·深圳 会展中心666号</span></li>
-                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                <li><span class="icon icon-map-marker"></span><span class="text">中国·香港 沙田 香港中文大学</span></li>
+                <li><span class="icon icon-envelope"></span><span class="text">crivieraayi@gmail.com</span></li>
               </ul>
+
             </div>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+              <li class="ftco-animate"><a href="https://www.weibo.com/5305032210/profile?topnav=1&wvr=6&is_all=1"><span class="icon-weibo"></span></a></li>
+              <li class="ftco-animate"><a href="images/ins.jpeg"><span class="icon-instagram"></span></a></li>
+              <li class="ftco-animate"><a href="mailto:crivieraayi@gmail.com"><span class="icon-google"></span></a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -541,8 +386,10 @@
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;<script>
               document.write(new Date().getFullYear());
-            </script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            </script> Heenimui. All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
+                title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
           </p>
         </div>
       </div>
@@ -568,9 +415,32 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script> -->
   <script src="js/main.js"></script>
+
+  <script>
+    var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>',
+      maxZoom: 18,
+    })
+
+    var map = L.map('map')
+      .addLayer(mapboxTiles)
+      .setView([22.421969, 114.208054], 15);
+
+      var honestIcon = L.icon({
+          iconUrl: 'images/honest.png',
+
+          iconSize:     [32, 32], // size of the icon
+          iconAnchor:   [22.418929, 114.208054], // point of the icon which will correspond to marker's location
+          popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+      });
+      L.marker([22.418929, 114.208054], {icon: honestIcon})
+      .bindPopup('crivieraayi@gmail.com')
+      .addTo(map);
+  </script>
+
 
 </body>
 
