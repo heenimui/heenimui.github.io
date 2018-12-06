@@ -306,11 +306,6 @@
           <div class="ftco-footer-widget mb-4">
             <h2 class="ftco-heading-2">关于我们</h2>
             <p>在这里，找到你的偶像，与你的同好一同为你的爱豆创建展览，将他/她们的闪光或故事用有温度的文字和叙事展示给世界。在这里，你还可以在讨论区与其他粉丝积极互动，还可以在商店直接查看爱豆相关的演唱会、粉丝见面会、专辑发布、周边等购买信息。</p>
-            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-            </ul>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
@@ -356,11 +351,16 @@
             <h2 class="ftco-heading-2">有问题？</h2>
             <div class="block-23 mb-3">
               <ul>
-                <li><span class="icon icon-map-marker"></span><span class="text">中国·深圳 会展中心666号</span></li>
-                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                <li><span class="icon icon-map-marker"></span><span class="text">中国·香港 沙田 香港中文大学</span></li>
+                <li><span class="icon icon-envelope"></span><span class="text">crivieraayi@gmail.com</span></li>
               </ul>
+
             </div>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+              <li class="ftco-animate"><a href="https://https://weibo.com/u/6481768741"><span class="icon-weibo"></span></a></li>
+              <li class="ftco-animate"><a href="images/ins.jpeg"><span class="icon-instagram"></span></a></li>
+              <li class="ftco-animate"><a href="mailto:crivieraayi@gmail.com"><span class="icon-google"></span></a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -371,14 +371,15 @@
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;<script>
               document.write(new Date().getFullYear());
-            </script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            </script> Heenimui. All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
+                title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
           </p>
         </div>
       </div>
     </div>
   </footer>
-
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
       <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
@@ -399,9 +400,32 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script> -->
   <script src="js/main.js"></script>
+
+  <script>
+    var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>',
+      maxZoom: 18,
+    })
+
+    var map = L.map('map')
+      .addLayer(mapboxTiles)
+      .setView([22.421969, 114.208054], 15);
+
+      var honestIcon = L.icon({
+          iconUrl: 'images/honest.png',
+
+          iconSize:     [32, 32], // size of the icon
+          iconAnchor:   [22.418929, 114.208054], // point of the icon which will correspond to marker's location
+          popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+      });
+      L.marker([22.418929, 114.208054], {icon: honestIcon})
+      .bindPopup('crivieraayi@gmail.com')
+      .addTo(map);
+  </script>
+
 
 </body>
 
