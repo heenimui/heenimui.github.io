@@ -158,7 +158,7 @@
           <!-- Page Content -->
           <h1>Map Page</h1>
           <hr>
-          <p>Welcome to find where your idols work.</p>
+          <p>香港經典年貨</p>
 
           <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>
           <button type="button" class="btn btn-warning" id='roll_up' onclick="show_location();">Show Location</button><br>
@@ -219,19 +219,20 @@
 
       var map = L.map('map')
               .addLayer(mapboxTiles)
-              .setView([37.522096, 127.018528], 11.5);
+              .setView([22.284386, 114.152709], 15);
 
       var items = [];
-      var airtable_read_endpoint = "https://api.airtable.com/v0/app8ZPDjx29AQpl6m/Korean%20entertainment%20agencies?api_key=keyHwnj1ElCshCfmN";
+      var airtable_read_endpoint = "https://api.airtable.com/v0/appfDzL8bzC8AxMAD/Table%201?api_key=keyHwnj1ElCshCfmN";
       var data = [];
       $.getJSON(airtable_read_endpoint, function(result) {
              $.each(result.records, function(key,value) {
                  items = {};
                      items["name"] = value.fields.Name;
-                     items["url"] = value.fields.url;
-                     items["image_url"] = value.fields.image_url;
+                     
+                     
                      items["latitud"] = value.fields.Lat;
                      items["longitud"] = value.fields.Lng;
+                     items["kind"] = value.fields.Kind;
                      data.push(items);
                      console.log(items);
               }); // end .each
@@ -243,7 +244,7 @@
         for (var i in data) {
             var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
             L.marker( latlng )
-                .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'" width = "80px"><br>'+data[i].name + '</a>' )
+                .bindPopup(data[i].kind + +data[i].name)
                 .addTo(map);
         }
       }
